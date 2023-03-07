@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="lfc_skulookup_productsearch" resource="default" engine="innodb" comment="SKU Lookup Product Search Table">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <column xsi:type="varchar" name="sku" nullable="false" length="64"/>
+        <column xsi:type="mediumtext" name="result" nullable="false"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <index referenceId="LFC_SKULOOKUP_PRODUCTSEARCH_ID" indexType="btree">
+            <column name="id"/>
+        </index>
+    </table>
+</schema>
