@@ -1,6 +1,22 @@
 <?php
-
+/**
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Element\Template $block
+ */
 declare(strict_types=1);
 ?>
-
-HELLO WORLD
+<form class="form subscribe" novalidate="novalidate" action="<?= $escaper->escapeUrl($block->getUrl('*/*/search')) ?>" method="post" id="sku-lookup">
+    <div class="field product-sku">
+        <div class="control">
+            <label for="product-sku">
+                <span class="label"><?= $escaper->escapeHtml(__('Product SKU:'))?></span>
+                <input name="sku" type="text" id="product-sku" placeholder="<?= $escaper->escapeHtmlAttr(__('Enter the product SKU')) ?>">
+            </label>
+        </div>
+    </div>
+    <div class="actions">
+        <button class="action sku-lookup primary" title="Submit" type="submit">
+            <span><?= $escaper->escapeHtml(__('Submit')) ?></span>
+        </button>
+    </div>
+</form>
