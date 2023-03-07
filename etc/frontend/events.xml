@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sku_lookup_search_after">
+        <observer name="sku_lookup_search_events" instance="LFC\SkuLookUp\Observer\LogSearchEvents"/>
+    </event>
+</config>
