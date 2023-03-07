@@ -1,0 +1,19 @@
+{
+    "name": "lfc/module-skulookup",
+    "description": "Magento2 module to search products by SKU",
+    "type": "magento2-module",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "magento/framework": "101.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "LFC\\SkuLookUp\\": ""
+        }
+    }
+}
