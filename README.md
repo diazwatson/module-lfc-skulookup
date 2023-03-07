@@ -8,7 +8,7 @@ If product is not found it shows a message notifying the user that the product d
 ### Composer (preferable)
 1. Download and install the package
 ```markdown
-composer config repositories.stripe/stripe-php "vcs" "git@github.com:diazwatson/module-lfc-skulookup.git"
+composer config repositories.lfc/lfc-skulookup "vcs" "git@github.com:diazwatson/module-lfc-skulookup.git"
 composer require lfc/module-skulookup
 ```
 2. run `bin/magento setup:upgrade`
